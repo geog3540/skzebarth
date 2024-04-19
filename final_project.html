@@ -215,36 +215,36 @@
           <br>
         <br>
       <h6 style="text-indent: 50px;"><i>PlanetScope:</i></h6>
-      <p style="text-indent: 50px;">Comparing the spatial patterns between the 3-meter IDW raster and the 3-meter NDCI product from 
-        PlanetScope is challenging due to the cutoff occurring down the right side of Big Spirit Lake (Figure 4, middle section). 
-        This large no-data clip is present because the PlanetScope satellites operate as constellation products, which means that errors 
-        can occur when capturing a full scene. In this case, the following satellite did not capture the correct extent to mosaic the imagery 
-        perfectly, cutting off what is arguably one of the most important parts of the raster to compare, as this is where the IDW has its 
-        largest low and high points. Nevertheless, some spatial patterns/variances are present, particularly the northwest portions of the 
-        IDW and PlanetScope NDCI, which follow similar generalizable patterns; however, this becomes less and less true the more southeast you 
-        are in the image. More interesting is the northeastern portion of the IDW and planetscope imagery; these locations do not agree regarding 
-        chlorophyll-a levels. This is where the point data noted its highest chlorophyll-a levels, but on the NDCI imagery, the levels 
-        are reporting lower than the western portion of the imagery. After reviewing the histogram of NDCI values across the lake, we found that 
-        the range of values for PlanetScope (0.0 - 0.52) was the second highest of the three satellites observed. It follows a normal distribution 
-        with a slight skew towards higher NDCI values. Finally, the pixel correlation is the second highest of the three instruments, presenting a 
-        slightly negative correlation between in-situ chlorophyll-a and pixel values, 
+      <p style="text-indent: 50px;">Comparing the spatial patterns between the 3-meter IDW raster and the 3-meter NDCI product from PlanetScope 
+        is challenging due to the cutoff occurring down the right side of Big Spirit Lake (Figure 4, middle section). This large no-data clip is
+         present because the PlanetScope satellites operate as constellation products, which means that errors can occur when capturing a full scene. 
+         In this case, the following satellite did not capture the correct extent to mosaic the imagery perfectly, cutting off what is arguably one 
+         of the most important parts of the raster to compare, as this is where the IDW has its most significant variance. Furthermore, the PlanetScope
+          NDCI, when the scale is corrected to show more variability, still exhibits a large amount of noise. Nevertheless, some spatial patterns/variances 
+          are present, particularly the northwest portions of the IDW and PlanetScope NDCI, which follow similar generalizable patterns (i.e., 
+          There is a high band of NDCI that wraps around a slight dip of lower NDCI values; this also occurs in the westernmost section); however,
+           this becomes less and less true the more southeast you are in the image. More interesting is the northeastern portion of the IDW and 
+           planetscope imagery; these locations do not agree regarding chlorophyll-a levels. This is where the point data noted its highest chlorophyll-a 
+           levels, but on the NDCI imagery, the levels are reporting lower than the western portion of the imagery. After reviewing the histogram of 
+           NDCI values across the lake, we found that the range of values for PlanetScope (0.0 - 0.52) was the second highest of the three satellites 
+           observed. It follows a normal distribution with a slight skew towards higher NDCI values. Finally, the pixel correlation is the second highest
+            of the three instruments, presenting a slightly negative correlation between in-situ chlorophyll-a and pixel values, 
         with the closest pixel values (R^2 = 0.032, p = 0.374) performing lower than using interpolated pixels (R^2 = 0.065, p = 0.199) (Figure 5).  </p>
     <br>
     <br>
       <div class="row">
         <div class="container">
             <img class="card-img-top" src="images/PlanetScope_NDCI_2-3.svg" alt="">
-            <p class="card-text text-center">(Figure 4: Final model workflow demonstrating where data is coming from through model analysis 
-                  and final objectives.)</p>
+            <p class="card-text text-center">(Figure 4: PlanetScope NDCI comparison: Inverse Distance Weighted rasters (un-normalized & normalized) on top, 
+              PlanetScope NDCI data (un-normalized & normalized) middle, 
+              NDCI distributions (un-normalized & normalized) on bottom. )</p>
         </div>
       </div>
-    <br>
     <br>
       <div class="row">
         <div class="container">
             <img class="card-img-top" src="images/PlanetScope_NDCI_pixel.svg" alt="">
-            <p class="card-text text-center">(Figure 4: Final model workflow demonstrating where data is coming from through model analysis 
-                  and final objectives.)</p>
+            <p class="card-text text-center">(Figure 5: PlanetScope NDCI linear regressions(nearest-pixel & interpolated pixel).)</p>
         </div>
       </div>
     <br>
