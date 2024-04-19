@@ -244,25 +244,30 @@
       <div class="row">
         <div class="container">
             <img class="card-img-top" src="images/PlanetScope_NDCI_pixel.svg" alt="">
-            <p class="card-text text-center">(Figure 5: PlanetScope NDCI linear regressions(nearest-pixel & interpolated pixel).)</p>
+            <p class="card-text text-center">(Figure 5: PlanetScope NDCI linear regressions(nearest-pixel & interpolated pixel.))</p>
         </div>
       </div>
     <br>
     <h6 style="text-indent: 50px;"><i>Sentinel-2:</i></h6>
-      <p style="text-indent: 50px;">Eventually, this work will be used to build a HAB dashboard for the State of Iowa, 
-        which will alleviate the demand upon agencies to increase water quality testing without increasing spending. 
-        Therefore, the ultimate audience is water quality managers in Iowa. However, established satellite remote sensing methodologies, 
-        such as using NDCI to measure current water quality, have yet to be tested in Iowa. To build this eventual HAB dashboard, 
-        we must first determine what available instruments will be most helpful in achieving our ultimate goal. 
-        This project aims to resolve this by answering research questions 1 and 2, which ultimately makes the audience of this research 
-        the members of the Lab for Observing and Quantifying Aquatic and Terrestrial Ecosystems (LOQATE). 
-        The LOQATE lab needs this first step completed before any further research can commence. </p>
+      <p style="text-indent: 50px;">In general, Sentinel-2 performed the poorest among all satellites assessed (Figure 6). 
+        Complete data is available for the Sentinel-2 platform, and in visually examining its NDCI product and relative IDW across the lake, 
+        there are a few patterns worth noting. First, the Sentinel-2 NDCI correctly identifies the northeast cutout as having the highest 
+        chlorophyll-a values, and generally follows the correct patterns with the middle-southeast dip in chlorophyll-a. However, almost every 
+        portion of the western and southern NCDI does not follow spatial distributions similar to those of the IDW. Extreme NCDI values are present 
+        along the outskirts of most of the northeastern portion of Big Spirit Lake, which is noteworthy because this is not seen in PlanetScope imagery 
+        with coincident bands. The range of NDCI values (0.01 - 0.27) is the lowest among all three platforms and, similar to PlanetScope, is more 
+        normally distributed with a skew towards higher NDCI values. Also present in this imagery are clouds, which report very low NDCI values that impact 
+        the satellite's success rate; the pixel correlation is the second highest of the three instruments, presenting a very slight negative correlation 
+        between in-situ chlorophyll-a and pixel values, with the closest pixel values (R^2 = 0.003, p = 0.740) performing lower than using interpolated pixels 
+        (R^2 = 0.004, p = 0.703) (Figure 7). There is no relationship between Sentinel-2's remotely sensed NDCI product and lab-verified chlorophyll-a; even 
+        masking for cloud values does not improve the NDCI values to a statistically significant point and does not perform better than PlanetScope or Sentinel-3 data. 
+      </p>
     <br>
       <div class="row">
         <div class="container">
             <img class="card-img-top" src="images/Sentinel-2_NDCI_2-3.svg" alt="">
-            <p class="card-text text-center">(Figure 4: Final model workflow demonstrating where data is coming from through model analysis 
-                  and final objectives.)</p>
+            <p class="card-text text-center">(Figure 8: Sentinel-2 NDCI comparison: Inverse Distance Weighted rasters (un-normalized & normalized) on top, 
+              Sentinel-2 NDCI data (un-normalized & normalized) middle, NDCI distributions (un-normalized & normalized) on bottom.)</p>
         </div>
       </div>
     <br>
@@ -270,8 +275,7 @@
       <div class="row">
         <div class="container">
             <img class="card-img-top" src="images/Sentinel-2_NDCI_pixel.svg" alt="">
-            <p class="card-text text-center">(Figure 4: Final model workflow demonstrating where data is coming from through model analysis 
-                  and final objectives.)</p>
+            <p class="card-text text-center">(Sentinel-2 NDCI linear regressions(nearest-pixel & interpolated pixel.))</p>
         </div>
       </div>
     <br>
@@ -288,8 +292,9 @@
       <div class="row">
         <div class="container">
             <img class="card-img-top" src="images/Sentinel-3_NDCI_2-3.svg" alt="">
-            <p class="card-text text-center">(Figure 4: Final model workflow demonstrating where data is coming from through model analysis 
-                  and final objectives.)</p>
+            <p class="card-text text-center">(Figure 8: Sentinel-3 NDCI comparison: Inverse Distance Weighted rasters 
+              (un-normalized & normalized) on top, Sentinel-3 NDCI data (un-normalized & normalized) middle, 
+              NDCI distributions (un-normalized & normalized) on bottom.)</p>
         </div>
       </div>
     <br>
@@ -297,8 +302,7 @@
       <div class="row">
         <div class="container">
             <img class="card-img-top" src="images/Sentinel-3_NDCI_pixel.svg" alt="">
-            <p class="card-text text-center">(Figure 4: Final model workflow demonstrating where data is coming from through model analysis 
-                  and final objectives.)</p>
+            <p class="card-text text-center">(Figure 9: Sentinel-3 NDCI linear regressions(nearest-pixel & interpolated pixel.))</p>
         </div>
       </div>
     <br>
