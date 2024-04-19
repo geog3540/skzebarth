@@ -138,26 +138,35 @@
               Inset shows Orleans Beach. While daily imagery is critical for monitoring, Sentinel-3 limits the ability to capture near-shore HABs.)</p>
        </div>
       </div><br>
-      <p style="text-indent: 50px;">Three sensors are used in this project, as they have varying spatial resolutions and band placements. 
-        We have selected these three sensors because they capture the trade-off between spatial and temporal resolution (Figure 2). 
+      <p style="text-indent: 50px;">Three sensors are used in this project, as they have varying spatial resolutions and band placements.
         Sentinel-2, with a revisit time of 5 days and spatial resolution of 20 meters, has been used in recent HAB analysis (Beal et al., 2024). 
         Sentinel-3 was designed for water applications, but specifically for ocean watercolor, so it collects imagery approximately daily but with 
         300 m spatial resolution (Donlon et al., 2012). The PlanetScope SuperDove satellite constellation has a nearly daily revisit time and a 
         spatial resolution of 3 m but remains untested as data has only recently become available to the public. These remote sensing platforms were 
         selected for their synergistic capabilities: Sentinel-2's moderate spatial resolution and more appropriate spectral bands, Sentinel-3's 
-        frequent revisits and ideal spectral bands, and PlanetScope's high spatial and temporal resolution (Figure 2 & 3). 
-        Sentinel data is freely available from the Copernicus open-access hub, and PlanetScope data from the Planet Explorer open-access hub. </p>
+        frequent revisits and ideal spectral bands, and PlanetScope's high spatial and temporal resolution (Figure 2). 
+        Sentinel data is freely available from the <a href="https://dataspace.copernicus.eu/">Copernicus Data Space Ecosystem</a>&copy;, 
+        and PlanetScope data from <a href="https://www.planet.com/explorer/">Planet Explorer</a>&copy;.</p>
 
-      <h5>Other relevant justification of mapping:</h5><br>
-      <div class="row">
-        <div class="container">
-            <img class="card-img-top" src="images/flowmap_3.png" alt="">
-            <p class="card-text text-center">(Figure 2. US Migration Map, Natural Breaks Chloropleth)</p>
-       </div>
-             </div><br>
-
-
-      <h6>Justification of Chloropleth Map:</h6>
+      <h6 style="text-indent: 50px;"><i>Predicting Chlorophyll-a:</i></h6>
+      <p style="text-indent: 50px;">In the future, we plan on assessing more spectral indices, a multiple-instance learning algorithm, 
+        and a random forest machine learning approach. However, this project assesses the Normalized Difference Chlorophyll Index (NDCI). 
+        The NDCI uses the red-edge (centered 705 nm, 15nm Full Width Half Maximum (FWHM)) and red (centered 665nm, 30 nm FWHM)  bands 
+        available on the Sentinel-2 (Eq. 1), as these bands have been shown to strongly correlate to chlorophyll-a (Caballero et al., 2020). 
+        Planetscope has spectrally coincident bands, both in location and bandwidth, allowing for a 1-1 comparison of the resulting NDCI product. 
+        However, Sentinel-3 uses bands 08 (centered 665 nm, 10nm FWHM) and 11 (centered 708.75 nm, 10nm FWHM) to produce the resulting NDCI product.   </p>
+        <div class="eq-c">
+          Fraction =
+           <div class="fraction">
+           <span class="fup">50</span>
+           <span class="bar">/</span>
+           <span class="fdn">10</span>
+           </div>
+           = 5
+         </div>
+      
+      
+        <h6>Justification of Chloropleth Map:</h6>
       <p>To begin, we are dealing with a non-normal dataset, which is expected given that we are measuring human movement through time. 
         Therefore, the classification schemes that should be used are natural breaks and manual breaks. 
         While natural breaks is better at minimizing the variance within the class and maximizing the variance between classes, 
