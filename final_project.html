@@ -90,24 +90,54 @@
           <p style="text-indent: 50px;"><b>Here, I use satellite remote sensing to predict chlorophyll-a in Big Spirit Lake 
             in Iowa with PlanetScope, Sentinel-2, and Sentinel-3 for a 9/11/2023 to answer the following questions:</b></p>
             <ol>
-              <li>What spatial resolution is most appropriate for capturing the spatial variability of HABS, particularly given an </li>
+              <li>What spatial/spectral resolution of the proposed instruments is most appropriate for capturing the spatial variability of HABS?</li>
               <li>Which instrument has the highest pixel and interpolated pixel correlation between field-verified chlorophyll-a and remotely sensed chlorophyll-a?</li>
             </ol>
 
       <br>
       <h5 style="color: rgb(0, 47, 255);"><u>Data Collection & Methods:</u></h5>
       <br>
-      <h6 style="text-indent: 50px;">Study Site:</h6>
-      <p>The general direction of flows is highly dependent on the starting point. If you are talking about Texas, it's North; if it's Washington, the flows come from a southern direction. 
-        However, as we move toward the midwest, all hell breaks loose, and movement happens in almost all cardinal directions. 
-        The flows are fantastic for showing movement in general, as well as the starting and ending points, but to understand movement through time, you have to look at all relevant information, which is answered below in question 3. </p>
+      <h6 style="text-indent: 50px;"><i>Study Site & In-situ Data:</i></h6>
+      <p style="text-indent: 50px;">The study site for this project is Big Spirit Lake, located in Orleans in northwest Iowa. 
+        Big Spirit Lake was selected as it is the largest body of water in the state of Iowa and is a major 
+        recreation site for Iowans that also experience late summer algal blooms. 
+        The presence of microcystin is the main concern for public health, but microcystin does not possess 
+        a spectral or optical signature that remote sensing can measure. Therefore, proxies such as chlorophyll-a 
+        and phycocyanin are used to monitor microcystin concentrations, as they have been shown to correlate with 
+        microcystin toxin presence (Buley et al., 2022; Marion et al., 2012). Chlorophyll-a is a pigment in algae that
+        photosynthesizes sunlight into organic compounds and is a commonly applied measure of water's eutrophic condition as 
+        algae biomass grows (Zhang et al., 2017). However, chlorophyll-a is not a perfect measure of HAB risk, as it is present
+         in many algal species that do not produce toxins (Ogashawara, 2020). Phycocyanin, a secondary pigment 
+         found in HAB species such as Microcystin aeruginosa, has been the target for many recent studies as it 
+         provides the capacity to distinguish toxin-producing algal species. We conducted four field campaigns 
+         in Big Spirit lake through the 2023 season to gather the in-situ chlorophyll-a lab-verified values needed 
+         for future empirically-driven machine-learning approaches. Data assessed here is from campaign four on 9/11/2023.
+          Each campaign used a small boat to collect 40 water samples following State Hygenic Lab (SHL) protocol. 
+          Study site sampling points are approximately 700 meters from one another and were created to align with 
+          the predicted overpass of satellites (Figure 1). At each collection site, sub-centimeter resolution Global navigation 
+          satellite system (GNSS) locations were taken with a Trimble DA2 at each site to identify corresponding imagery pixels. 
+          The in-situ values collected on 9/11/2023 had chlorophyll-a values verified via the SHL. 
+        These values will be point-based data used to verify pixel values from the remotely sensed data. </p>
 
-      <h5>Flow patterns in relation to location characteristics displayed by node symbol and choropleth base map:</h5>
-      <p>Combining the relevant information from all three variables (the chloropleth, nodes, and flows, there is a discernable movement pattern). 
-        The most significant flows of individuals move from the external midwestern states (from the Canadian to the Mexican border) to Oklahoma, which is most likely showing the aftermath of the U.S. government's 
-        forced removal of natives from the state in the late 19th century, and the influx of the "sooner" movement and Oklahoma land rush.
-         While other movements can be discerned throughout the Eastern seaboard and Pacific Northwest states, the other direction I want to note is the Western push from midwestern states to California. 
-        By 1890, midwestern immigrants had become California's largest population group, which is captured here in this map.  </p><br>
+      <h6 style="text-indent: 50px;"><i>Remotely Sensed Imagery:</i></h6>
+      <br>
+      <div class="row">
+        <div class="container">
+            <img class="card-img-top" src="images/IWC_6tight@3x.png" alt="">
+            <p class="card-text text-center">(Figure 3.In Sept. 2023, Big Spirit Lake in NW Iowa had a HAB that was imaged with PlanetScope (~3m pixel size),
+               Sentinel-2 (20m), and Sentinel-3 (300m) sensors. 
+              Inset shows Orleans Beach. While daily imagery is critical for monitoring, Sentinel-3 limits the ability to capture near-shore HABs.)</p>
+       </div>
+      </div><br>
+      <p style="text-indent: 50px;">Three sensors are used in this project, as they have varying spatial resolutions and band placements. 
+        We have selected these three sensors because they capture the trade-off between spatial and temporal resolution (Figure 2). 
+        Sentinel-2, with a revisit time of 5 days and spatial resolution of 20 meters, has been used in recent HAB analysis (Beal et al., 2024). 
+        Sentinel-3 was designed for water applications, but specifically for ocean watercolor, so it collects imagery approximately daily but with 
+        300 m spatial resolution (Donlon et al., 2012). The PlanetScope SuperDove satellite constellation has a nearly daily revisit time and a 
+        spatial resolution of 3 m but remains untested as data has only recently become available to the public. These remote sensing platforms were 
+        selected for their synergistic capabilities: Sentinel-2's moderate spatial resolution and more appropriate spectral bands, Sentinel-3's 
+        frequent revisits and ideal spectral bands, and PlanetScope's high spatial and temporal resolution (Figure 3). 
+        Sentinel data is freely available from the Copernicus open-access hub, and PlanetScope data from the Planet Explorer open-access hub. </p>
 
       <h5>Other relevant justification of mapping:</h5><br>
       <div class="row">
