@@ -181,6 +181,7 @@
     <!-- Results -->
 
     <h5 style="color: rgb(0, 47, 255);"><u>Results:</u></h5>
+    <br>
     <h6 style="text-indent: 50px;"><i>Targeted Audience, Visualization Objectives, & Workflow:</i></h6>
       <p style="text-indent: 50px;">Eventually, this work will be used to build a HAB dashboard for the State of Iowa, 
         which will alleviate the demand upon agencies to increase water quality testing without increasing spending. 
@@ -214,14 +215,20 @@
           <br>
         <br>
       <h6 style="text-indent: 50px;"><i>PlanetScope:</i></h6>
-      <p style="text-indent: 50px;">Eventually, this work will be used to build a HAB dashboard for the State of Iowa, 
-        which will alleviate the demand upon agencies to increase water quality testing without increasing spending. 
-        Therefore, the ultimate audience is water quality managers in Iowa. However, established satellite remote sensing methodologies, 
-        such as using NDCI to measure current water quality, have yet to be tested in Iowa. To build this eventual HAB dashboard, 
-        we must first determine what available instruments will be most helpful in achieving our ultimate goal. 
-        This project aims to resolve this by answering research questions 1 and 2, which ultimately makes the audience of this research 
-        the members of the Lab for Observing and Quantifying Aquatic and Terrestrial Ecosystems (LOQATE). 
-        The LOQATE lab needs this first step completed before any further research can commence. </p>
+      <p style="text-indent: 50px;">Comparing the spatial patterns between the 3-meter IDW raster and the 3-meter NDCI product from 
+        PlanetScope is challenging due to the cutoff occurring down the right side of Big Spirit Lake (Figure 4, middle section). 
+        This large no-data clip is present because the PlanetScope satellites operate as constellation products, which means that errors 
+        can occur when capturing a full scene. In this case, the following satellite did not capture the correct extent to mosaic the imagery 
+        perfectly, cutting off what is arguably one of the most important parts of the raster to compare, as this is where the IDW has its 
+        largest low and high points. Nevertheless, some spatial patterns/variances are present, particularly the northwest portions of the 
+        IDW and PlanetScope NDCI, which follow similar generalizable patterns; however, this becomes less and less true the more southeast you 
+        are in the image. More interesting is the northeastern portion of the IDW and planetscope imagery; these locations do not agree regarding 
+        chlorophyll-a levels. This is where the point data noted its highest chlorophyll-a levels, but on the NDCI imagery, the levels 
+        are reporting lower than the western portion of the imagery. After reviewing the histogram of NDCI values across the lake, we found that 
+        the range of values for PlanetScope (0.0 - 0.52) was the second highest of the three satellites observed. It follows a normal distribution 
+        with a slight skew towards higher NDCI values. Finally, the pixel correlation is the second highest of the three instruments, presenting a 
+        slightly negative correlation between in-situ chlorophyll-a and pixel values, 
+        with the closest pixel values (R^2 = 0.032, p = 0.374) performing lower than using interpolated pixels (R^2 = 0.065, p = 0.199) (Figure 5).  </p>
     <br>
     <br>
       <div class="row">
