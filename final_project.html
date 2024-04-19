@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Samuel's Portfolio</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="css/3-col-portfolio.css" rel="stylesheet">
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="index.html">Samuel Taylor's Geovisualization Portfolio</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="shortbio.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="files/Samuel_Taylor_CV_4_12_24.pdf">CV</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mailto:samuel-zebarth@uiowa.edu">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://github.com/geog3050/skzebarth">Code</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container">
+
+      <!-- Page Heading -->
+      <h1 class="my-4 text-center">Final Project:<br>
+        <small>Geovisualization/Geoprogramming</small>
+      </h1>
+
+      <!-- /.row -->
+      <br>
+      <h5 style="color: rgb(0, 47, 255);"><u>Background & Goal:</u></h5>
+      <br>
+      <p>Harmful algal blooms (HABs) have been increasingly present in Iowa lakes, 
+        which in turn threatens drinking water availability and state income through recreational opportunities. 
+        Given that HABs can produce microcystin, a toxin that can cause liver and kidney failure and cancer, there 
+        is an increased human health risk (Gu et al., 2022; US EPA, 2013). Current projections suggest that HAB
+        events will increase with warming temperatures, and 2023 was a record-breaking year for HAB advisories in Iowa 
+        (Gu et al., 2022; US EPA, 2013). Currently, in Iowa, 39 state-owned beaches are monitored by water sampling once a week, 
+        limiting the capacity to make informed risk assessments across the state throughout the summer. 
+        Environmental groups have stated that increased monitoring is needed to limit human exposure (IDNR, 2022; Peikes, 2021; Schechinger, 2021), 
+        but budget constraints limit the ability to increase monitoring across more lakes. 
+        There is a critical need to lower costs and time while improving our capacity for detecting and managing HAB dynamics across time and space.</p>
+        <p style="text-indent: 50px;">Satellite remote sensing has been leveraged worldwide for rapid HAB assessment,
+           capturing HAB spatial and temporal variability at a rate that is impossible with in-situ techniques. 
+           Furthermore, the annual mean cost savings of a satellite platform for retrieval of chlorophyll-a alone 
+           has been estimated to be $42 million a year (Papenfus et al., 2020). However, current work targets large 
+           freshwater lakes (e.g., Lake Erie) or oceans (e.g., Florida coast), which is not translatable to the smaller 
+           freshwater lakes common in Iowa and the Midwest because of the need to capture near-shore HABs 
+           (Binding et al., 2021; Hill et al., 2020). Inland waters are also optically complex systems in comparison to 
+           coastal and ocean monitoring, making established techniques non-transferable. This research expands the use of 
+           satellite remote sensing for detecting, assessing, and monitoring HABs in freshwater inland lakes with a focus 
+           on generating a near-daily product that could inform public health initiatives. We will develop a remote sensing 
+           methodology that fuses imagery from multiple satellite sensors, enhancing our capability to monitor HABs almost 
+           daily across a lake. This multi-sensor approach equips Iowa water managers with the spatio-temporal trends that 
+           can provide insight into the dynamics of HABs. However, to complete this overarching aim in future research, 
+          we must first assess the capacities of a suite of satellites in retrieving chlorophyll-a. </p>
+          <p style="text-indent: 50px;"><b>Here, I use satellite remote sensing to predict chlorophyll-a in Big Spirit Lake 
+            in Iowa with PlanetScope, Sentinel-2, and Sentinel-3 for a 9/11/2023 to answer the following questions:</b></p>
+            <ol>
+              <li>What spatial resolution is most appropriate for capturing the spatial variability of HABS, particularly given an </li>
+              <li>Which instrument has the highest pixel and interpolated pixel correlation between field-verified chlorophyll-a and remotely sensed chlorophyll-a?</li>
+            </ol>
+
+      <br>
+      <h5 style="color: rgb(0, 47, 255);"><u>Data Collection & Methods:</u></h5>
+      <br>
+      <h6 style="text-indent: 50px;">Study Site:</h6>
+      <p>The general direction of flows is highly dependent on the starting point. If you are talking about Texas, it's North; if it's Washington, the flows come from a southern direction. 
+        However, as we move toward the midwest, all hell breaks loose, and movement happens in almost all cardinal directions. 
+        The flows are fantastic for showing movement in general, as well as the starting and ending points, but to understand movement through time, you have to look at all relevant information, which is answered below in question 3. </p>
+
+      <h5>Flow patterns in relation to location characteristics displayed by node symbol and choropleth base map:</h5>
+      <p>Combining the relevant information from all three variables (the chloropleth, nodes, and flows, there is a discernable movement pattern). 
+        The most significant flows of individuals move from the external midwestern states (from the Canadian to the Mexican border) to Oklahoma, which is most likely showing the aftermath of the U.S. government's 
+        forced removal of natives from the state in the late 19th century, and the influx of the "sooner" movement and Oklahoma land rush.
+         While other movements can be discerned throughout the Eastern seaboard and Pacific Northwest states, the other direction I want to note is the Western push from midwestern states to California. 
+        By 1890, midwestern immigrants had become California's largest population group, which is captured here in this map.  </p><br>
+
+      <h5>Other relevant justification of mapping:</h5><br>
+      <div class="row">
+        <div class="container">
+            <img class="card-img-top" src="images/flowmap_3.png" alt="">
+            <p class="card-text text-center">(Figure 2. US Migration Map, Natural Breaks Chloropleth)</p>
+       </div>
+             </div><br>
+
+
+      <h6>Justification of Chloropleth Map:</h6>
+      <p>To begin, we are dealing with a non-normal dataset, which is expected given that we are measuring human movement through time. 
+        Therefore, the classification schemes that should be used are natural breaks and manual breaks. 
+        While natural breaks is better at minimizing the variance within the class and maximizing the variance between classes, 
+        I personally did not like that it would group positive and negative values into classes around zero (Figure 2, class 4 of legend). 
+        Therefore, I opted to use manual breaks with selections close to the natural break locations. You can see that this changes the map readers understanding
+         of migration for a few states that experienced an increase in flow but would not have appeared this way with natural breaks 
+         (Figure 1, Figure 2; Minnesota, Ohio, Nevada, some eastern seaboard states). The diverging color scheme was selected as this is a diverging dataset with a
+          meaningful zero; one could argue that the zero is significant as it shows no change in population, but I argue it is also important as the boundary between 
+          loss and gain and is therefore essential to distinguish in the manual breaks choice. 
+        The blue-red color map was used as the most visually appealing, with red indicating a net loss and blue indicating a net gain.  </p>
+
+      <h6>Justification of Nodes:</h6>
+      <p>When observing the underlying total flow data for the nodes, we are dealing with a similar non-normal dataset, however, no negative values.
+         While several classification choices could be used, particularly some that are more accurate to the underlying data (natural breaks), 
+         I ultimately decided on a proportional scale with a monotone color. What I ultimately took away from the readings for this assignment is that color and classes are powerful tools, 
+         which limits how much you can use on a single map with multiple visual aspects. The color comes from the underlying choropleth map, 
+         and using color here would only confuse the reader further or require them to put more effort into understanding the map story. Based on the research, 
+         the monotone coloring will lead to the most straightforward interpretation of total movement. I tried a custom coloration of white to white, but it was not as clean as an "all black" color scheme. 
+         Secondly, the proportional scale had the lowest number of classes, and when I used other classification methods, such as natural breaks with a minimum of four class sizes, 
+         this only added to the visual clutter. Even though there may be a better classification scheme given the data, such as a three-class manual breaks approach, 
+        in this particular case, the proportional does its job quite well WHILE allowing the reader to compare state to state.  </p><br>
+
+        <div class="row">
+          <div class="container">
+              <img class="card-img-top" src="images/flowmap_2.png" alt="">
+              <p class="card-text text-center">(Figure 3. 3 US Migration Map, Reduced Flows)</p>
+         </div>
+               </div><br>
+
+      <h6> Justification of Flows:</h6>
+      <p>In the same vein as the previous justifications, we have non-normal data, and I used manual breaks. 
+        I did this to lower the class sizes to three; yes, 4 - 7 would generally be better, but it helps show the story of movement while reducing clutter. 
+        First, differentiating between large movements and small movements is substantially more straightforward. 
+        Following the research again, using the monotone arrow and tapered flow line produced the most correct and quickest response from the assessed users, and I applied the same knowledge here.
+         While a tapered flowline was "okay" at getting flow across, the arrowhead was simply better at telling the story of directionality.
+          Secondly, it does this without using color, which is already present in the underlying choropleth map. 
+          The color being a part of flows a vital takeaway from the assignment papers, and what was clear is that flows with color can be highly distracting. 
+          Therefore, I chose to avoid the colored flow approach entirely. 
+          Finally, The instructions ask for us to "Try to limit the visual clutter produced by overlapping flow lines by carefully adjusting the show top flows option on Flow Symbology." 
+          The largest overlap of flows, or greatest clutter, occurs in Iowa, Missouri, Kansas, Nebraska, Oklahoma, Arkansas, and Texas. 
+          However, I argue that reducing the flows beyond its current setting (100) doesn't impact the cluttered area, and more importantly, 
+          once top flows are reduced to the point it does affect these states (~70) it has severely impacted the story of movement in the states. 
+          Yes, it may be more visually appealing (Figure 3), but it throws away the story of movement in several states and skews the story of human movement compared to the more cluttered but accurate map (Figure 1). 
+        Therefore, I am keeping the more cluttered flows with its limited classes instead. </p>
+    </div>
+    
+    
+    
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Samuel Taylor 2024</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
