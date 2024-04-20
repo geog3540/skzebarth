@@ -292,6 +292,12 @@
          presenting a slight positive correlation between in-situ chlorophyll-a and pixel values, with the closest pixel values (R^2 = 0.167, p = 0.053)
          performing better than using interpolated pixels (R^2 = 0.062, p = 0.253) (Figure 9). There is a very slight relationship between Sentinel-3's remotely 
          sensed NDCI product and lab-verified chlorophyll-a.</p>
+         <div class="row">
+          <div class="container">
+              <img class="card-img-top" src="images/Eq2.png" alt="">
+              <p class="card-text text-center">(Equation 2: OtherI Calculation.)</p>
+         </div>
+        </div><br>
     <br>
       <div class="row">
         <div class="container">
@@ -317,6 +323,8 @@
     <br>
     <h5 style="color: rgb(0, 47, 255);"><u>Discussion & Conclusion:</u></h5>
     <br>
+    
+    <h6 style="text-indent: 50px;"><i>Considering Spectral & Spatial Resolution:</i></h6>
     <p style="text-indent: 50px;">Before I began this work, I was confident that Sentinel-3 would perform the poorest among the three in both research questions. 
       Its course spatial resolution would limit its capacity to capture the dynamic nature of HABs, and by integrating the spectral signature over such a larger 
       area than PlanetScope and Sentinel-2, I assumed that its NDCI product would not correlate. However, the results prove the opposite, but what is interesting 
@@ -330,18 +338,80 @@
         has an FWHM of 30 nm while Sentinel-3's is only 10 nm. For the red edge band, Sentinel-2 is centered at 705 nm with an FWHM of 15 nm, while Sentinel-3 is 
         centered at 708.75 nm with an FWHM of 10 nm. The necessary chlorophyll-a spectral signatures that the bands of each instrument are targeting, a prominent 
         absorption feature near 660 nm and high reflectance around 705 nm, are very small, meaning the larger bandwidths may not effectively capture chlorophyll-a. 
-        But this is not the full story, as plenty of research demonstrates Sentinel-2 with substantially improved results than what is delivered here, but for Iowa 
-        lakes, other well-developed research methodologies may not be applicable. Other spectrally active parameters, such as colored dissolved organic material and sediment, 
-        may be affecting the spectral signature, particularly given that Big Spirit Lake is very shallow.  </p>
+        Secondly, Other spectrally active parameters, such as colored dissolved organic material and sediment, may be affecting the spectral signature, particularly 
+        given that Big Spirit Lake is very shallow. But this is not the full story, as plenty of research demonstrates Sentinel-2 with substantially improved results 
+        than what is delivered here, 
+        but for Iowa lakes, other well-developed research methodologies may not be applicable. </p>
         <p style="text-indent: 50px;">The best evidence that higher spatial resolution does have importance is that PlanetScope performed substantially better with 
           the same band centers and bandwidths. Initially, I considered this to be a temporal effect, which after consideration is unlikely to be the case as only 
           20 minutes passed between PlanetScope and Sentinel-2 time of capture. What is likely causing this large disparity is that clouds are influencing Sentinel-2 
           and that Planetscope can capture more spatial variability of HAB conditions. Nevertheless, what ultimately becomes clear is that the NDCI is not a 
           particularly useful index to use over Big Spirit Lake. In the future, cloud masking from code will be implemented into this work, and more spectral indices 
           will be assessed for improved accuracy; 
-          perhaps the bands used by Sentinel-2 and PlanetScope NDCI products are not enough for Iowa waters. </p>
+          perhaps the bands used by Sentinel-2 and PlanetScope NDCI products are not enough for Iowa waters.This conclusion was reached when I simply could not determine 
+          why this approach failed miserably in action. Out of pure curiosity, I ran a few other indices with Sentinel-2 and was able to constrain the impact of clouds better(Figure 10). 
+          In particular, I completed (Eq.2), and demonstrated substantial improvement from Sentinel-2 (Figure 11), although a statistically 
+          significant relationship is still not present.
+          However, it's important to note that PlanetScope and Sentinel-3 do not have the proper bands to complete this calculation and are therefore not shown.  </p>
+          <br>
+      <div class="row">
+        <div class="container">
+            <img class="card-img-top" src="images/Sentinel-2_otheri_2-3.svg" alt="">
+            <p class="card-text text-center">(Figure 10: Sentinel-2 Eq2 comparison: Inverse Distance Weighted rasters 
+              (un-normalized & normalized) on top, Sentinel-2 Eq2 data (un-normalized & normalized) middle, 
+              Eq2 distributions (un-normalized & normalized) on bottom.)</p>
+        </div>
+      </div>
+    <br>
+      <div class="row">
+        <div class="container">
+            <img class="card-img-top" src="images/S2_otheri_comparison.svg" alt="">
+            <p class="card-text text-center">(Figure 11: Sentinel-2 Eq2 linear regressions(nearest-pixel & interpolated pixel.))</p>
+        </div>
+      </div>
+    <br>
   <br>
-    
+  <h6 style="text-indent: 50px;"><i>Interactability improvements:</i></h6>
+  <p style="text-indent: 50px;">	Currently, this project and its related imagery is not interactable, and this will be addressed in the future. 
+    First, it would be very handy to have the three satellite images stacked on one another with the ability to switch between them easily or adjust 
+    a slider to increase/decrease the opacity to compare rasters 1-1. Including this would only increase in value when other indices are added, which 
+    could easily be added as several SVG files for each instrument that a dropdown list could call. Secondly, if we were to show each of the rasters 
+    (in order PlanetScope, Sentinel-2, and Sentinel-3) in a 1x3 grid, it would be very handy to lock the extent of each grid for each instrument and add 
+    panning and zooming capabilities for the imagery. This would allow the user to zoom into the imagery and simultaneously see subtle details across all 
+    three images and better show the differences between spatial resolution of instruments - it is very easy to see the difference for Sentinel-3, but it 
+    is hard to see at this scale for Sentinel-2 and PlanetScope. Third, a temporal assessment must also be included in the future, where you can compare 
+    imagery throughout a timeframe the user selects. Adding the temporal component would substantially improve the tool towards the LOQATE lab's goal of 
+    making a HAB dashboard with which water quality managers can interact. 
+    Fourth, other interpolation/smoothing methods should be available, such as kriging, bilinear interpolation, and nearest neighbor. 
+    Finally, the user should be able to select between various classifications of 
+    the raster data, which is not included in this project. While general interactability would be a nice improvement, 
+    the addition of classification schemes is necessary for moving forward and will be included in the future. </p>
+  <h6 style="text-indent: 50px;"><i>Conclusion:</i></h6>
+  <p style="text-indent: 50px;">	The primary learning outcome of this work is that chlorophyll-a indices, while computationally quick, will not be the answer 
+    for remotely sensing chlorophyll-a in Iowa's optically complex waters. In comparing the IDW and NDCI products, there is no clear winner for capturing the 
+    spatial dynamics of HABs reliably. Certainly, the higher spatial resolution instruments capture more details of HABs themselves. However, given the NDCI 
+    methodology, the resulting visual comparison may not be meaningless if the NDCI product is not statistically significant with verified chlorophyll-a values. 
+    Therefore, it is essential to shift our future assessment to rely more on spectral resolution improvements over spatial resolution improvements. Sentinel-3 
+    demonstrates this as it performed the best across Big Spirit Lake considering all platforms and will be the satellite that LOQATE places the greatest emphasis 
+    on moving forward with 2024 sampling, even though it is the hardest imagery to pre-process. Finally, what is clear from Sentinel-2 imagery is that clouds 
+    substantially affect the calculation, and a masking product must be developed in the future. The primary limitation of this work is that it does not assess other 
+    spectral indices besides NDCI (yes, a quick foray into a different one was included, but this is nowhere near the scrutiny needed to include the work in results), 
+    as other bands may be necessary for retrieval of chlorophyll-a. 
+    However, I postulate that Iowa waters are optically complex, more so than any index can reliably capture.  </p>
+    <p style="text-indent: 50px;">	Therefore, what must change moving into the future is the inclusion of machine learning approaches over indices. 
+      In recent years, researchers have called for increased empirical, machine learning-driven remote sensing approaches for inland water quality assessment, 
+      as these techniques performed better than spectral indices in retrieving optically active constituents such as chlorophyll-a and phycocyanin (Sagan et al., 2020). 
+      However, predicting microcystin concentrations with remote sensing remains a challenge because it is not optically active. Machine learning approaches, such as 
+      random forest and multiple-instance learning algorithms, could link the complex, non-linear relationships between chlorophyll-a, phycocyanin, and microcystin. 
+      For example, Sagan et al. (2020) used a deep neural network fusion approach with Sentinel-2 and Landsat-8 to increase the revisit time and predict HABs in 
+      Missouri and Illinois lakes with an  of 0.85. Beal et al. (2024) found that random forest using Sentinel-2 predicted chlorophyll-a, phycocyanin, and dissolved 
+      oxygen with an of 0.47, 0.69, and 0.68, respectively. Furthermore, LOQATE lab PI, Dr. Susan Meerdink, has developed a mutli-target multiple-instance machine 
+      learning approach to help our work better capture algal bloom dynamics. While not implemented for HABs yet, the multi-target multiple-instance approach has 
+      proven to be a very computationally efficient and accurate machine-learning approach for detecting invasive plant species at low concentrations with imprecise 
+      location data (Meerdink et al., 2024). Using hyperspectral imagery over the Great Lakes, the multi-target multiple-instance approach appears to track trends of 
+      HAB density. Although in-situ data is not available to validate the Great Lakes MTMI approach, 
+      preliminary results from these approaches are encouraging, especially for the optical complexity of inland, freshwater lakes such as Big Spirit.  </p>
+  
     <!-- References -->
     <br>
     <h5 style="color: rgb(0, 47, 255);"><u>References:</u></h5>
