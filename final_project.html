@@ -280,14 +280,18 @@
       </div>
     <br>
     <h6 style="text-indent: 50px;"><i>Sentinel-3:</i></h6>
-      <p style="text-indent: 50px;">Eventually, this work will be used to build a HAB dashboard for the State of Iowa, 
-        which will alleviate the demand upon agencies to increase water quality testing without increasing spending. 
-        Therefore, the ultimate audience is water quality managers in Iowa. However, established satellite remote sensing methodologies, 
-        such as using NDCI to measure current water quality, have yet to be tested in Iowa. To build this eventual HAB dashboard, 
-        we must first determine what available instruments will be most helpful in achieving our ultimate goal. 
-        This project aims to resolve this by answering research questions 1 and 2, which ultimately makes the audience of this research 
-        the members of the Lab for Observing and Quantifying Aquatic and Terrestrial Ecosystems (LOQATE). 
-        The LOQATE lab needs this first step completed before any further research can commence. </p>
+      <p style="text-indent: 50px;">Sentinel-3 was the highest-performing satellite in retrieving chlorophyll-a from Big Spirit Lake. 
+        Nearly complete data is available for the Sentinel-3 platform, as the product is delivered to the user with a land mask built into the raster, 
+        which generates extreme values. These values are masked in the final product, creating missing pixels in the final NDCI raster (Figure 8).
+         Visually examining the Sentinel-3 NDCI product and its relative IDW across Big Spirit Lake is more generalizable due to the IDW and Sentinel-3 
+         spatial resolutions of 300m. Overall, the Sentinel-3 imagery appropriately detects general zones of high chlorophyll-a, and as the IDW product, 
+         does lower towards the middle/southeast. However, they do not lower at similar rates, even when normalized. The range of Sentinel-3 values is the 
+         highest (-1 to 1) and is seminormal/minorly bimodal. While this geovisualization course taught that the NDCI colormap should be a diverging color 
+         scheme because of its normalized scale with a meaningful zero point, above 99% of all of the data for all three satellites is positive, which makes 
+         a continuous color scheme more appropriate for seeing the NDCI distributions. Finally, Sentinel-3 pixel correlation is the highest of all instruments, 
+         presenting a slight positive correlation between in-situ chlorophyll-a and pixel values, with the closest pixel values (R^2 = 0.167, p = 0.053)
+         performing better than using interpolated pixels (R^2 = 0.062, p = 0.253) (Figure 9). There is a very slight relationship between Sentinel-3's remotely 
+         sensed NDCI product and lab-verified chlorophyll-a.</p>
     <br>
       <div class="row">
         <div class="container">
