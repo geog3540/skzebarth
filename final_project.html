@@ -317,8 +317,31 @@
     <br>
     <h5 style="color: rgb(0, 47, 255);"><u>Discussion & Conclusion:</u></h5>
     <br>
-
-
+    <p style="text-indent: 50px;">Before I began this work, I was confident that Sentinel-3 would perform the poorest among the three in both research questions. 
+      Its course spatial resolution would limit its capacity to capture the dynamic nature of HABs, and by integrating the spectral signature over such a larger 
+      area than PlanetScope and Sentinel-2, I assumed that its NDCI product would not correlate. However, the results prove the opposite, but what is interesting 
+      is that the Sentinel-3 NDCI did not follow the same trend where interpolating point values improved correlation. This makes sense given that the interpolation 
+      uses pixels that are 300 meters, which means that after a specific spatial resolution, interpolating pixel values is unnecessary. However, when working with 
+      instruments that have a higher spatial resolution, it is better to interpolate values from nearby pixels to improve the retrieval of chlorophyll-a values. 
+      This is a valuable result to consider, as it may also be true when training a machine-learning dataset that uses all key spectral bands. </p>
+      <p style="text-indent: 50px;">The success of Sentinel-3 demonstrates that spectral resolution is crucial, and smaller bandwidths and improved band locations 
+        are essential in the accurate retrieval of chlorophyll-a in Big Spirit Lake. Consider the spectral differences between Sentinel-2 and Sentinel-3; the band 
+        centers used are close/identical, but the bandwidths are very different. The red band for both Copernicus platforms is centered on 665 nm, but Sentinel-2 
+        has an FWHM of 30 nm while Sentinel-3's is only 10 nm. For the red edge band, Sentinel-2 is centered at 705 nm with an FWHM of 15 nm, while Sentinel-3 is 
+        centered at 708.75 nm with an FWHM of 10 nm. The necessary chlorophyll-a spectral signatures that the bands of each instrument are targeting, a prominent 
+        absorption feature near 660 nm and high reflectance around 705 nm, are very small, meaning the larger bandwidths may not effectively capture chlorophyll-a. 
+        But this is not the full story, as plenty of research demonstrates Sentinel-2 with substantially improved results than what is delivered here, but for Iowa 
+        lakes, other well-developed research methodologies may not be applicable. Other spectrally active parameters, such as colored dissolved organic material and sediment, 
+        may be affecting the spectral signature, particularly given that Big Spirit Lake is very shallow.  </p>
+        <p style="text-indent: 50px;">The best evidence that higher spatial resolution does have importance is that PlanetScope performed substantially better with 
+          the same band centers and bandwidths. Initially, I considered this to be a temporal effect, which after consideration is unlikely to be the case as only 
+          20 minutes passed between PlanetScope and Sentinel-2 time of capture. What is likely causing this large disparity is that clouds are influencing Sentinel-2 
+          and that Planetscope can capture more spatial variability of HAB conditions. Nevertheless, what ultimately becomes clear is that the NDCI is not a 
+          particularly useful index to use over Big Spirit Lake. In the future, cloud masking from code will be implemented into this work, and more spectral indices 
+          will be assessed for improved accuracy; 
+          perhaps the bands used by Sentinel-2 and PlanetScope NDCI products are not enough for Iowa waters. </p>
+  <br>
+    
     <!-- References -->
     <br>
     <h5 style="color: rgb(0, 47, 255);"><u>References:</u></h5>
